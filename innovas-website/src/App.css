@@ -1,6 +1,20 @@
 
  /* navbar */
 
+
+.nav ul{
+  color: white;
+  display: flex;
+  margin-left:45%;
+  margin-top: -9%;
+}
+ul h2{
+margin: 3%;
+float: right;
+}
+
+
+
  /* our planet */
  .greenbox{
 	background-color:rgba(0, 180.00000447034836, 89.00000229477882, 1);
@@ -112,25 +126,30 @@
 /* product */
 .product{
   display: flex;
-  margin-top: 2%;
+  margin-top: 7%;
 }
 .words{
   margin-left: 5%;
  
 }
+.now{
+  /* font-size: 10px; */
+  margin-top: 10%;
+}
 .tree{
   height: 90vh;
-  width: 145%;
-  /* margin-left: -6%; */
+  width: 115%;
+  margin-left: 7.5%;
 }
 .pictures{
   margin-left: 1%;
   
 }
 .head{
-  margin-top: 42%;
-  font-size: 36px;
+  /* margin-top: 50%; */
+  font-size: 40px;
   text-align: left;
+  margin-top: 100px;
 }
 button{
   background-color: #00B459;
@@ -147,8 +166,8 @@ p{
   position: absolute;
   width: 132px;
   height: 48px;
-  left: 590px;
-  top: 446px;
+  left: 500px;
+  top: 1846px;
   border: 1px solid rgba(0, 180, 89, 0.8);
   background: rgba(0, 180, 89, 0.8);
 }
@@ -157,7 +176,7 @@ p{
   width: 112px;
   height: 116px;
   left: 1165px;
-  top: 140px;
+  top: 1540px;
   border: 1px solid rgba(0, 180, 89, 0.8);
   background: #00B459;
 }
@@ -171,7 +190,7 @@ p{
   width: 100%;   
 }
 .headwork{
-  top: 120%;
+  top: 320%;
   font-size: 36px;
   text-align: center;
   /* top: 122px; */
@@ -186,6 +205,9 @@ p{
 .team{
   display: flex;
   /* margin: auto; */
+}
+h1{
+  text-align: center;
 }
 .team div{
   margin: 5%;
