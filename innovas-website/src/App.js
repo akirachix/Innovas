@@ -1,20 +1,19 @@
 import './App.css';
-import Body from './Body';  // eslint-disable-line no-unused-vars
+import Body from './Body';
 import Navbar from './Navbar';
+// import Body from './Body';  // eslint-disable-line no-unused-vars
+
 
 function App() {
   return (
-  <body>
+
    <div className="App">
+
+       {/* <Body/> */}
    
-     
-     
-      <Body/>
-      <Navbar/>
-      
+
     </div>
         
-    </body>
  
   );
 }
