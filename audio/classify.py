@@ -57,9 +57,13 @@ def main(argv):
                     score = res['result']['classification'][label]
                     print('%s: %.2f\t' % (label, score), end='')
                     if label =='chainsaw' and score >= 0.75:
-                        print('chainsaw detected')
+                      print('chainsaw detected !!')
+                    elif label == 'truck' and label == 'chainsaw':
+                        print('Logging activity on going!!')
+                    elif label == 'truck' and score >= 0.75:
+                        print('Truck detected!!')
                     else:
-                        print('background detected')
+                      print('background detected')
                             
                 print('', flush=True)
 
