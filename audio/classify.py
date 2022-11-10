@@ -68,8 +68,8 @@ def main(argv):
             model_info = runner.init()
             labels = model_info['model_parameters']['labels']
             print('Loaded runner for "' + model_info['project']['owner'] + ' / ' + model_info['project']['name'] + '"')
-            account_sid ="AC48ddb1aed0cd0233c8c709ad7482cc12"
-            auth_token ="e8b5bc1a4b4dab50191462cf44923409"
+            account_sid ="AC7794b0176007afd32865b0fb0af52865"
+            auth_token ="3f141dfc71354f2b394bc4bb97a6918a"
 
             #Let the library choose an audio interface suitable for this model, or pass device ID parameter to manually select a specific audio interface
             selected_device_id = None
@@ -84,28 +84,28 @@ def main(argv):
                     print('%s: %.2f\t' % (label, score), end='')
                     
                     # Connecting to Twilio
-                    account_sid ="AC52da2cff219957b28e36ce4067e21451"
-                    auth_token ="2063a2f7f3fb52d71018b7cd1c0c3b58"
+                    account_sid ="AC7794b0176007afd32865b0fb0af52865"
+                    auth_token ="3f141dfc71354f2b394bc4bb97a6918a"
                     client = Client(account_sid, auth_token)
                     if label =='chainsaw' and score >= 0.75:
                         message = client.messages.create(
-                        to=["+254740701194", "+254700245143"], 
-                        from_=" +18147476080",
-                        body="Hello chainsaw detected ")
+                        to=["+254746467165", "+254700245143"], 
+                        from_="+18435086319",
+                        body="Chainsaw sound detected at \n https://goo.gl/maps/xyqrKZdjjqmYEZR37")
                         print(message.sid)
                         print('chainsaw detected !!')
                     elif label == 'truck' and label == 'chainsaw':
                         message = client.messages.create(
-                        to=["+254740701194", "+254700245143"],
-                        from_=" +18147476080",
-                        body="Hello Logging activity on going!! ")
+                        to=["+254746467165", "+254700245143"],
+                        from_="+18435086319",
+                        body="Logging activity detected at \n https://goo.gl/maps/xyqrKZdjjqmYEZR37")
                         print(message.sid)
                         print('Logging activity on going!!')
                     elif label == 'truck' and score >= 0.75:
                         message = client.messages.create(
-                       to="+254740701194", 
-                       from_=" +18147476080",
-                        body="Hello Truck detected!!")
+                       to="+254746467165", 
+                       from_="+18435086319",
+                        body="Truck sound detected at\n https://goo.gl/maps/xyqrKZdjjqmYEZR37")
                         print(message.sid)
                         print('Truck detected!!')
                     else:
